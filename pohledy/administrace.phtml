@@ -1,0 +1,17 @@
+
+<p>Vítejte v administraci, jste přihlášen jako&nbsp&nbsp<strong style="font-size: 1.5rem; text-transform:uppercase; border-bottom:4px solid #eecf22"><?= $jmeno ?></strong></p>
+<?php if (!$admin) : ?>
+	<br>
+	<a style="font-size:0.9rem;color:red;text-align:center"><i style="border-radius:50% ;padding:10px 12px;border:6px solid #f33f3f;color:#f33f3f;margin-bottom:0.5rem" class="fas fa-lock fa-2x"></i><br>Nemáte přístup ke všem funkcím, požádejte administrátora, zda by vám nepřidělil oprávnění.<br><br><b style="color:rgb(33, 182, 33);">Děkujeme že využívate naší aplikaci.</b></a>
+	<br>
+<?php endif ?>
+<?php if ($admin) : ?>
+	<br>
+	<a style="font-size:0.9rem;color:rgb(33, 182, 33);text-align:center"><i style="border-radius:50% ;padding:10px 12px;border:4px solid rgb(31 197 31);;color:rgb(31 197 31);margin-bottom:0.5rem" class="fas fa-unlock fa-2x"></i><br>Máte přístup ke všem funkcím.<br><br> <b>Děkujeme že využívate naší aplikaci.</b></a>
+	<br>
+<?php endif ?>
+<br><br>
+<div class="tlacitka">
+<a class="pojistenec" href="uvod">Zpět na úvodní stranu</a>
+<a class="pojistenec" href="administrace/odhlasit">Odhlásit</a>
+</div>

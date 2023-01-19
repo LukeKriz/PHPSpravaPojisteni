@@ -1,0 +1,36 @@
+
+<h2>Pojistná událost:</h2>
+
+<div class="container3">            
+<div class="kontakt1">
+<h4>Pojistná událost: </h4><p class="data"><?= $druh_udalosti?></p>          
+
+<h4>Škoda: </h4><p class="data"><?=$cena_skody?> Kč</p>
+<h4>Datum pojistné události: </h4><p class="data"><?=$datum_udalosti?></p>
+<h4>Stav: </h4><p class="data"><?=$aktualni_stav?></p>
+
+<h4>Popis škody: </h4><p class="data"><?=$popis_skody?></p>
+
+</div>
+<div class="kontakt2">
+
+<h4>Datum vyplaceni: </h4><p class="data"><?=$datum_vyplaceni?></p>
+<h4>Vyplaceno: </h4><p class="data vyplaceno"><?=$vyplaceno?> Kč</p>
+</div> 
+</div>
+<div class="icons3">
+
+<?php if ($admin) : ?>
+<a style="margin:0.5rem;text-decoration:none;" href="editudalost/<?=$user_id?>/<?=$insurance_id?>/<?=$event_id?>"><i class="fas fa-pencil-alt" style="color:orange;font-size:1.6rem;"></i></a>
+<a style="margin:0.5rem;text-decoration:none;" href="detailpojisteni/<?=$user_id?>/<?=$insurance_id?>/<?=$event_id?>/smazat"><i class="far fa-trash-alt" style="color:red;font-size:1.6rem;"></i></a>
+<?php endif ?>
+</div>    
+
+
+
+
+<div class="tlacitka" style="margin-top: 2rem; margin-bottom:2rem;">
+<a class="pojistenec" href="detailpojisteni/<?= $user_id?>/<?=$insurance_id?> ">Zpět</a>
+
+</div>
+

@@ -1,0 +1,37 @@
+
+<h2>Edituj pojištění:</h2>
+
+
+<form class="formularis2" method="post">
+        <h4>Pojistná událost: </h4><br>
+        <input name="druh_udalosti"  value="<?=$udalost['druh_udalosti']?>"/><br>
+        <h4>Škoda v Kč: </h4><br>
+        <input type="number" name="cena_skody" value="<?=$udalost['cena_skody']?>" /><br>
+        <h4>Datum pojistné události: </h4><br>
+        <input type="date" name="datum_udalosti" value="<?=$udalost['datum_udalosti']?>" /><br>
+        <h4>Stav: </h4><br>
+        <select type="text" name="aktualni_stav">
+        <option value="<?=$udalost['aktualni_stav']?>"><?=$udalost['aktualni_stav']?> - Zvoleno</option>
+        <option value="-">-</option>¨
+        <option value="Probíhá">Probíhá</option>    
+        <option value="Vyřešeno">Vyřešeno</option>   
+        <option value="Zamítnuto">Zamítnuto</option>
+        
+      
+       
+        
+        </select><br>
+        <h4>Datum vyplacení: </h4><br>
+        <input type="date" name="datum_vyplaceni" value="<?=$udalost['datum_vyplaceni']?>" /><br>
+        <h4>Vyplaceno: </h4><br>
+        <input type="number" name="vyplaceno" value="<?=$udalost['vyplaceno']?>" /><br>
+        <h4>Popis pojistné události: </h4><br>
+        <textarea type="text" name="popis_skody" ><?=$udalost['popis_skody']?></textarea><br>
+        </div>
+        
+           
+           <div style="margin-top: 0;" class="tlacitka">
+           <a style="margin-right:0.1rem" class="pojistenec" href="detailudalosti/<?=$zpet?>">Zpět</a>
+            <input  type="submit" />
+            </div>
+        </form>

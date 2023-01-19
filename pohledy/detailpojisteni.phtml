@@ -1,0 +1,54 @@
+
+<h2>Pojištění:</h2>
+
+<div class="container2">
+                
+<div class="kontakt1">
+<h4>Název pojištění: </h4><p class="data"><?= $druh_pojisteni?></p>          
+
+<h4>Poplatek za platné období: </h4><p class="data"><?=$castka?> Kč</p>
+<h4>Předmět pojištění: </h4><p class="data"><?=$predmet_pojisteni?></p>
+
+</div>
+<div class="kontakt2">
+
+<h4>Platnost od: </h4>           
+<p class="data"><?=$platnost_od?></p>
+<h4>Platnost do: </h4>  
+<p class="data"><?=$platnost_do?></p><br>
+</div>
+</div> 
+<div class="icons2">
+<?php if ($admin) : ?>
+<a style="text-decoration:none;" href="editpojisteni/<?=$user_id?>/<?=$insurance_id?>"><i class="fas fa-pencil-alt" style="color:orange;font-size:1.6rem;"></i></a>
+<a style="text-decoration:none;" href="detail/<?=$user_id?>/<?=$insurance_id?>/smazat"><i class="far fa-trash-alt" style="color:red;font-size:1.6rem;"></i></a>
+<?php endif ?>
+    
+</div>
+<h2 style="font-size: 1.5rem;margin-bottom:4rem;">Pojistné události:</h2>
+<table>
+    
+    
+   
+  
+    
+        <?php
+        $nacti= new DetailUdalostiKontroler();
+        $nacti->vypis()
+        ?>
+    
+
+
+   
+   
+</table>
+
+
+<div class="tlacitka" style="margin-top: 5rem; margin-bottom:5rem">
+
+<a class="pojistenec" href="detail/<?= $user_id?> ">Zpět</a>
+<?php if ($admin) : ?>
+<a class="pojistenec" href="novaudalost/<?= $user_id?>/<?= $insurance_id?>">Přidat Událost</a>
+<?php endif ?>
+</div>
+

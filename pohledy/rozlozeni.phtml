@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+	<head>
+		<base href="/localhost" />
+		<meta charset="UTF-8" />
+		<title><?= $titulek ?></title>
+		<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css" type="text/css"/>
+		<script src="https://kit.fontawesome.com/0ac4af757c.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<header>
+		<nav>
+
+			<a class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+             </a>
+
+			<ul class="navigation">
+				<li><a href="uvod">Úvod</a></li>
+
+				
+				<li><a href="pojisteni">Správa Pojištěných</a></li>
+				
+						
+			</ul>
+		</nav>
+		
+		<a class="user" href="administrace"><i class="fa fa-user"></i></a>
+
+			
+		</header>
+		<?php foreach ($zpravy as $zprava) : ?>
+			<p class="zprava"><?= $zprava ?></p>
+		<?php endforeach ?>
+		
+		<br clear="both" />
+		
+		<article>
+			<div class="container">
+			<?php $this->kontroler->vypisPohled(); // vložení aktuálního pohledu do šablony ?>
+			</div>
+		</article>
+		
+		<footer>
+		
+
+		</footer>
+
+		<script src="../js/menuhambruger.js"></script>
+	</body>
+</html>

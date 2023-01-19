@@ -1,0 +1,22 @@
+
+<h2>Správa Pojištěných</h2>
+<?php if ($admin) : ?>
+	<div class="tlacitka">
+	<a class="pojistenec" href="novypojistenec">Nový Pojištěnec</a>
+	</div>
+<?php endif ?>
+<?php if (!$admin) : ?>
+<div style="height: 50px;"></div>
+<?php endif ?>
+
+<?php
+
+
+
+$vypis = new PojisteniKontroler();
+
+$vypis -> vypis();
+?>
+<div class="tlacitka">
+<a class="pojistenec" href="uvod">Zpět na hlavní stránku</a>
+</div>

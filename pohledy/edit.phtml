@@ -1,0 +1,30 @@
+
+<h2>Edituj Pojišťence</h2>
+
+<form method="post"><div class="formularis"><div>
+        
+        <h4>Jméno: </h4><br>
+        <input type="text" name="name" value="<?=$osoba['name']?>" /><br>
+        <h4>Příjmení: </h4><br>
+        <input type="text" name="surname" value="<?=$osoba['surname']?>" /><br>
+        <h4>Email: </h4><br>
+        <input type="email" name="email" value="<?=$osoba['email']?>" /><br>
+        <h4>Telefon: </h4><br>
+        <input type="phone" name="phone" value="<?=$osoba['phone']?>" /><br></div>
+        <div><h4>Ulice a č.p.: </h4><br>
+        <input type="text" name="street" value="<?=$osoba['street']?>" /><br>
+        <h4>Město/Obec: </h4><br>
+        <input type="text" name="city" value="<?=$osoba['city']?>" /><br>
+        <h4>PSČ: </h4><br>
+        <input type="text" name="post_code" value="<?=$osoba['post_code']?>" /><br></div></div>
+
+       
+       <div class="tlacitka">
+       <a class="pojistenec" href="detail/<?=$osoba['person_id']?>">Zpět</a>
+        <input type="submit" />
+        
+        </div>
+</form>
+
+
+ 

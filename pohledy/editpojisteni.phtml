@@ -1,0 +1,45 @@
+
+<h2>Edituj pojištění:</h2>
+
+
+<form method="post"><div class="formularis"><div>
+            <h4>Druh pojištění: </h4><br>
+            <select type="text" name="druh_pojisteni"  >
+            <option value="<?=$pojisteni['druh_pojisteni']?>"><?=$pojisteni['druh_pojisteni']?> - Zvoleno</option>
+            <option value="-">-</option>
+            <option value="Pojištění majetku">Pojištění majetku</option>
+            <option value="Povinné ručení">Povinné ručení</option>
+            <option value="Úrazové pojištění">Úrazové pojištění</option>
+            <option value="Cestovní pojištění">Cestovní pojištění</option>
+            <option value="Havarijní pojištění">Havarijní pojištění</option>
+            <option value="Pojištění odpovědnosti za škodu">Pojištění odpovědnosti za škodu</option>
+            
+
+        </select><br>
+            <h4>Částka v Kč: </h4><br>
+            <input type="number" name="castka" value="<?=$pojisteni['castka']?>" /><br>
+            <h4>Předmět pojištění: </h4><br>
+            <select type="text" name="predmet_pojisteni" >
+            <option value="<?=$pojisteni['predmet_pojisteni']?>"><?=$pojisteni['predmet_pojisteni']?> - Zvoleno</option>
+            <option value="-">-</option>
+            <option value="Automobil">Automobil</option>
+            <option value="Domácí mazličci">Domácí mazličci</option>
+            <option value="Dům">Dům</option>
+            <option value="Osoba">Osoba</option>
+            <option value="Průmyslový objekt">Průmyslový objekt</option>
+           
+            
+            </select><br></div>
+            <div><h4>Platnost od: </h4><br>
+            <input type="date" name="platnost_od" value="<?=$pojisteni['platnost_od']?>" /><br>
+            <h4>Platnost do:: </h4><br>
+            <input type="date" name="platnost_do" value="<?=$pojisteni['platnost_do']?>" /><br></div></div>
+          
+
+    
+           <div class="tlacitka">
+             <a style="margin: 0 auto;" class="pojistenec" href="detailpojisteni/<?=$pojisteni['user_id']?>/<?=$pojisteni['insurance_id']?> ">Zpět</a>
+            <input type="submit" />
+           
+            </div>
+        </form>

@@ -1,0 +1,52 @@
+
+<h2>Pojištěnec:</h2>
+
+<div class="container2">
+                
+<div class="kontakt1">
+               
+<h3>Jméno a přijmení:<br></h3> <strong><?= $name . ' '. $surname?></strong><br>
+<h3>Adresa:</h3>
+<p class="adresa"><b>Ulice, č.p. :</b><span class="hide_470">&nbsp&nbsp&nbsp</span><?=$street?></p>
+<p class="adresa"><b>Město/ obec:</b><span class="hide_470">&nbsp&nbsp&nbsp</span><?=$city?></p>
+<p class="adresa"><b>PSČ:</b><span class="hide_470">&nbsp&nbsp&nbsp</span><?=$post_code?></p>
+</div>
+<div class="kontakt2">
+<h3>Email/ Telefon:</h3>        
+<br><p><?=$email?></p>
+<p><?=$phone?></p>
+</div>
+</div> 
+<div class="icons">
+
+<?php if ($admin) : ?>
+<td><a style="text-decoration:none; " href="edit/<?=$person_id?>" alt="Editovat"><i class="fas fa-pencil-alt" style="color:orange;font-size:1.6rem;"></i></a>
+<a style="text-decoration:none;" href="pojisteni/<?=$person_id?>    /smazat"><i class="far fa-trash-alt" style="color:red;font-size:1.6rem;"></i></a></td>
+<?php endif ?>
+    
+</div>
+
+<h2 style="font-size: 1.5rem;margin-bottom:4rem;">Uzavřené Pojistky:</h2>
+
+<table>
+    
+    
+   
+  
+    
+        <?php
+        $nacti= new DetailKontroler();
+        $nacti->vypis()
+        ?>
+    
+
+
+   
+   
+</table>
+<div class="tlacitka" style="margin-top: 5rem; margin-bottom:5rem;">
+<a class="pojistenec" href="pojisteni ">Zpět</a>
+<?php if ($admin) : ?>
+<a class="pojistenec" href="novepojisteni/<?=$person_id?>">Přidat Pojištění</a>
+<?php endif ?>
+</div>
